@@ -1,0 +1,13 @@
+@mixin formFont($fontSize) {
+  text-transform: uppercase;
+  font-size: $fontSize;
+  font-weight: bold;
+  color: $color;
+}
+@mixin flex ($flexDirect,$justifyC, $alignI) {
+  display: flex;
+  flex-direction: $flexDirect;
+  justify-content: $justifyC;
+  align-items: $alignI;
+}
+

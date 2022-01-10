@@ -1,0 +1,171 @@
+@import "mixins";
+@import "variables";
+@import "breakpoints";
+body{
+  margin: unset;
+}
+.container{
+  @include for-tablet-only {
+    background-color: $containerColor;
+    padding: 20px;
+  }
+  @include for-phone-only {
+    background-color: white;
+  }
+  @include flex(column, center, center);
+}
+.background {
+  @include for-phone-only {
+    padding: 0;
+  };
+  @include for-tablet-only {
+    width:60%;
+    border-radius: 15px;
+  };
+  @include flex(column, center, center);
+  background-color: white;
+  gap:20px;
+  padding: 10px;
+  width:95%;
+}
+.background__box-1 {
+  @include for-phone-only { @include flex (column, center, center); };
+  @include for-tablet-only {
+    @include flex(column, center, center);
+    width:90%;
+  };
+  @include flex (row, center, start);
+  background-color: white;
+  border-radius: 10px;
+  gap:40px;
+}
+.background__box-1__box-2  {
+  @include for-phone-only {
+    @include flex (column, center, center);
+  };
+  @include for-tablet-only {
+    @include flex(column, center, center);
+  };
+  @include flex (row, right, start);
+  gap: 40px;
+  width: 90%;
+}
+
+#green {
+  color: green;
+}
+.mb {
+  margin-bottom: 15px;
+}
+.form {
+  @include for-phone-only {
+    @include formFont(6pt);
+    box-shadow: none;
+    width: 100%;
+  };
+  @include for-tablet-only {
+    @include formFont(6pt);
+    width: 100%;
+    box-shadow: none;
+  };
+  @include formFont(9pt);
+  @include flex (column, start, left);
+  box-shadow: 0 0 10px 1px;
+  gap: 5px;
+  border-radius: 10px;
+  padding: 25px;
+  width: (100% / 3);
+}
+.spans {
+  display: flex;
+  justify-self: left;
+  text-align: left;
+  margin-right: 5px;
+}
+.input-box {
+  @include flex(column, center, start);
+  margin-bottom: 15px;
+}
+.line-without-gap {
+  @include flex(row, start, center);
+}
+.line-without-gap label {
+  margin-right: 5px;
+}
+.slct {
+  @include for-phone-only {
+    width: 80%;
+  };
+  @include for-tablet-only {  }
+  border-radius: 5px;
+  border: 1px solid #cecece;
+  background-color: #F6F6f6;
+  width: 100%;
+  padding: 4px 15px 4px 10px;
+  color: #444;
+
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+
+}
+.slct.active {
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+}
+.red {
+  color: red;
+}
+
+#title{
+  @include for-phone-only {
+    font-size:8pt;
+  };
+  @include for-tablet-only { @include formFont(9pt) };
+  font-size:13pt;
+}
+
+input:not(.radio) {
+  @include for-phone-only {
+    background: #F6F6f6;
+    border-radius: 8px;
+    width: 80%;
+    border: 1px solid #cecece;
+    padding: 6px 0 4px 10px;
+  };
+  background: #F6F6f6;
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid #cecece;
+  padding: 6px 0 4px 10px;
+
+}
+.radio {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  cursor: pointer;
+  text-indent: 22px;
+  font-size: 13px;
+  margin: unset;
+  padding: unset;
+}
+
+.line{
+  @include flex(row, srart, center);
+  gap: 5px;
+}
+button {
+  @include for-tablet-only {
+    align-self: center;
+  }
+  @include for-phone-only {
+      align-self: center;
+  }
+  display: flex;
+  align-self: start;
+}
+
+
+

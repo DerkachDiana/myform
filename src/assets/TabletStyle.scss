@@ -1,0 +1,14 @@
+@import "mixins";
+@import "variables";
+@media (max-width: 768px) {
+  .background {
+
+    @include flex(column, center, center);
+    gap:20px;
+    min-height: 100vh;
+    height: max-content;
+    padding: 20px;
+  }
+  .form {
+  }
+}

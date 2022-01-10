@@ -1,0 +1,11 @@
+@import "mixins";
+@import "variables";
+
+@mixin for-phone-only {
+  @media (max-width: 567px) { @content }
+}
+@mixin for-tablet-only {
+  @media (min-width: 567px) and (max-width: 768px) { @content }
+}
+
+
